@@ -1,5 +1,6 @@
 package com.nec.spring_mybatis_sample.model;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,7 +15,7 @@ public class TestModel {
 	private String name;
 
 	@Column(name = "update_datetime")
-	private Date updateDatetime;
+	private Timestamp updateDatetime;
 
 	public int getId() {
 		return id;
@@ -36,7 +37,7 @@ public class TestModel {
 		return updateDatetime;
 	}
 
-	public void setUpdateDatetime(Date updateDatetime) {
+	public void setUpdateDatetime(Timestamp updateDatetime) {
 		this.updateDatetime = updateDatetime;
 	}
 }
