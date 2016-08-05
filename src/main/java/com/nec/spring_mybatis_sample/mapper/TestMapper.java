@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import com.nec.spring_mybatis_sample.model.TestModel;
 
 public interface TestMapper {
-	@Insert("insert into test (id, name, update_datetime) values(#{id}, #{name}, #{updateDatetime})")
+	@Insert("insert into test (name) values(#{name})")
 	public int insert(TestModel model);
 
 	@Select("select * from test where id = #{id}")
