@@ -1,5 +1,35 @@
 # spring-mybatis-sample
 
+## API Reference
+
+### List records
+
+`GET` /
+
+### Get record
+
+`GET` /{id}
+
+### Insert records
+
+`POST` /
+
+#### Request body
+
+| Name | Type   |
+|------|--------|
+| name | string |
+
+#### Response body
+
+| Name | Type | Description |
+|------|------|-------------|
+| id   | int  | primary key |
+
+### Delete record
+
+`DELETE` /{id}
+
 ## Table layout
 
 ### test
