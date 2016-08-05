@@ -2,6 +2,7 @@ package com.nec.spring_mybatis_sample.controller;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class TestController {
 	@Transactional
 	public List<TesttableModel> show() {
 		List<TesttableModel> list = mapper.selectAll();
+		if (list == null) {
+			list = new ArrayList<TesttableModel>();
+		}
 		return list;
 	}
 }
