@@ -4,20 +4,21 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import com.nec.spring_mybatis_sample.model.TestModel;
 
 public interface TestMapper {
 	@Insert("insert into test (name) values(#{model.name})")
-	public int insert(TestModel model);
+	public int insert(@Param("model") TestModel model);
 
 	@Select("select * from test where id = #{id}")
-	public TestModel select(int id);
+	public TestModel select(@Param("id") int id);
 
 	@Select("select * from test order by id")
 	public List<TestModel> selectAll();
 
 	@Delete("delete from test where id = #{id}")
-	public void delete(int id);
+	public void delete(@Param("id") int id);
 }
