@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nec</groupId>
 	<artifactId>spring-mybatis-sample</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>spring-mybatis-sample</name>
 	<url>http://maven.apache.org</url>
