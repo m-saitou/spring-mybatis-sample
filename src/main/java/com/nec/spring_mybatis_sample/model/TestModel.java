@@ -3,12 +3,14 @@ package com.nec.spring_mybatis_sample.model;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 
-import lombok.Data;
-
-@Data
+@Entity
 public class TestModel {
+	@Column(name = "id")
 	private int id;
+
+	@Column(name = "name")
 	private String name;
 
 	@Column(name = "update_datetime")
