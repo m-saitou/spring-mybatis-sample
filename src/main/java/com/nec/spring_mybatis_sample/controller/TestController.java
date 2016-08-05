@@ -38,10 +38,12 @@ public class TestController {
 	@RequestMapping(value = "/", method = POST)
 	@Transactional
 	@ResponseBody
-	public int insert(@RequestBody TestModel model) {
-		int id = mapper.insert(model);
+	public TestModel insert(@RequestBody TestModel model) {
+		mapper.insert(model);
+		int id = mapper.selectLastId();
+		TestModel newModel = mapper.select(id);
 
-		return id;
+		return newModel;
 	}
 
 	@RequestMapping(value = "/{id}", method = GET)

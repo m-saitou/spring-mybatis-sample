@@ -22,9 +22,11 @@
 
 #### Response body
 
-| Name | Type | Description |
-|------|------|-------------|
-| id   | int  | primary key |
+| Name           | Type   | Description |
+|----------------|--------|-------------|
+| id             | int    | primary key |
+| name           | string |             |
+| updateDatetime | string |             |
 
 ### Delete record
 

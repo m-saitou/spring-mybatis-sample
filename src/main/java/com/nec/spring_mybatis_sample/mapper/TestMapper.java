@@ -25,4 +25,7 @@ public interface TestMapper {
 
 	@Delete("delete from test where id = #{id}")
 	public void delete(@Param("id") int id);
+
+	@Select("select last_insert_id() from test")
+	public int selectLastId();
 }
