@@ -1,18 +1,16 @@
 package com.nec.spring_mybatis_sample.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import java.util.Date;
 
-@Entity
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 public class TestModel {
-	@Column(name = "id")
 	private int id;
 
-	@Column(name = "name")
 	private String name;
 
-	@Column(name = "update_datetime")
-	private String updateDatetime;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	private Date updateDatetime;
 
 	public int getId() {
 		return id;
@@ -30,11 +28,11 @@ public class TestModel {
 		this.name = name;
 	}
 
-	public String getUpdateDatetime() {
+	public Date getUpdateDatetime() {
 		return updateDatetime;
 	}
 
-	public void setUpdateDatetime(String updateDatetime) {
+	public void setUpdateDatetime(Date updateDatetime) {
 		this.updateDatetime = updateDatetime;
 	}
 }
