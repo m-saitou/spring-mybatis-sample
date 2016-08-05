@@ -19,6 +19,7 @@ public interface TestMapper {
 	@Select("select * from test where id = #{id}")
 	public TestModel select(@Param("id") int id);
 
+	@Results({ @Result(property = "updateDatetime", column = "update_datetime") })
 	@Select("select * from test order by id")
 	public List<TestModel> selectAll();
 
