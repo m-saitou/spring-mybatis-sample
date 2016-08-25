@@ -15,9 +15,9 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://#{systemEnvironment.MYSQL_SERVICE_HOST}:#{systemEnvironment.MYSQL_SERVICE_PORT}/sampledb" />
-		<property name="username" value="test" />
-		<property name="password" value="test" />
+			value="jdbc:mysql://#{systemEnvironment.MYSQL_SERVICE_HOST}:#{systemEnvironment.MYSQL_SERVICE_PORT}/#{systemEnvironment.DBNAME}" />
+		<property name="username" value="#{systemEnvironment.DBUSER}" />
+		<property name="password" value="#{systemEnvironment.DBPASS}" />
 	</bean>
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
